@@ -29,7 +29,7 @@ export function Hero(){
                          <DiGit className="text-red-600"></DiGit>
                     </div>
                 </div>
-                <div className="text-6xl gap-4 flex justify-center items-center glass text-gray-600">
+                <div className="text-5xl gap-4 flex justify-center items-center glass text-gray-600">
                    <AiFillGithub></AiFillGithub>
                    <AiFillLinkedin></AiFillLinkedin>
                    <MdEmail></MdEmail> 
