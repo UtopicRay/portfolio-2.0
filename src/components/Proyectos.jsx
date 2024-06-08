@@ -47,7 +47,7 @@ export default function Proyectos() {
   const [currentProject, setCurrentProject] = useState(0);
   return (
     <section
-      className="my-6 max-w-[1200px] mx-auto grid grid-cols-8 gap-6"
+      className="my-24 max-w-[1200px] mx-auto grid grid-cols-8 gap-6"
       id="proyectos"
     >
       <div className="relative z-10 col-span-3 grid place-items-center grid-cols-1">
@@ -69,8 +69,8 @@ export default function Proyectos() {
         </ul>
       </div>
 
-      <div className="z-10 glass w-full col-span-5">
-        <div className="w-full h-80">
+      <div className="z-10 glass w-full col-span-5 max-w-[600px] mx-auto">
+        <div className="w-full h-auto">
           <img
             src={proyectos[currentProject].img}
             alt={`imagen de ${proyectos[currentProject].name}`}
@@ -83,10 +83,10 @@ export default function Proyectos() {
           </p>
           <div className="flex justify-between items-center">
             <div className="space-x-4 ">
-            <a href={proyectos[currentProject].link.site} className="bg-slate-600 px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300">
+            <a href={proyectos[currentProject].link.site} className="bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300">
               Visitar
             </a>
-            <a href={proyectos[currentProject].link.github} className="bg-slate-600 px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300">
+            <a href={proyectos[currentProject].link.github} className="bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300">
             Código
             </a>
             </div>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #26355d;
+  background-color: #003285;
 }
 span,
 .bg-color-primary {
@@ -15,10 +15,10 @@ span,
   @apply bg-gradient-to-r from-[#7a0d8a] via-[#c92085] to-[#c68109];
 }
 h2 {
-  @apply text-xl md:text-4xl;
+  @apply text-xl md:text-4xl text-[#FF7F3E];
 }
 p {
-  @apply text-xl tracking-tight leading-relaxed text-gray-200 text-left;
+  @apply  tracking-tight leading-relaxed text-[#FFDA78] text-left;
 }
 textarea,input{
   @apply mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4;

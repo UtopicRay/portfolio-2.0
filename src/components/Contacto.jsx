@@ -10,7 +10,7 @@ export function Contacto(){
                 <input type='email' placeholder="example@gmail.com" name="email" id="email"></input>
                 <textarea placeholder="Envie su mensaje ..." cols={30} rows={4}
                 name="text" id="text"></textarea>
-                <button type="submit" className="w-full rounded-md text-gray-100 font-semibold text-xl bg-color-primary">
+                <button type="submit" className="w-full rounded-md text-gray-100 font-semibold text-xl bg-blue-500 py-3">
                     Envie su mensaje
                 </button>
             </form>
