@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import LaVelada from "../assets/img/Clon-LaVelada.webp";
 import Esland from "../assets/img/esland-clon.webp";
 import NetFlix from "../assets/img/Netflix-Clon.webp";
-import { DiReact } from "react-icons/di";
+import react from '../assets/icons/react.svg'
 export default function Proyectos() {
   const proyectos = [
     {
@@ -15,7 +15,7 @@ export default function Proyectos() {
           github: "https://github.com/UtopicRay/Clon-la-VeladaIII",
         },
       ],
-      stack: [`${<DiReact></DiReact>}`],
+      stack: [react ],
     },
     {
       name: "Clon de los Premios Esland",
@@ -51,15 +51,15 @@ export default function Proyectos() {
       id="proyectos"
     >
       <div className="relative z-10 col-span-3 grid place-items-center grid-cols-1">
-        <p className="text-gray-200 font-bold text-4xl">
-          Seleccione el Proyecto
-        </p>
+        <h2 className=" text-4xl font-bold ">
+            Proyecto
+        </h2>
         <ul className="ml-6 flex flex-row md:flex-col gap-6 flex-wrap justify-center md:gap-1 space-y-2 md:space-y-4 text-2xl text-left">
           {proyectos.map((proyecto, index) => (
             <li
               key={index}
-              className={`cursor-pointer text-gray-300 ${
-                currentProject === index ? "active-project" : ""
+              className={`cursor-pointer text-gray-300  ${
+                currentProject === index ? "active-project" : "project"
               }`}
               onClick={() => setCurrentProject(index)}
             >
@@ -69,7 +69,7 @@ export default function Proyectos() {
         </ul>
       </div>
 
-      <div className="z-10 glass w-full col-span-5 max-w-[600px] mx-auto">
+      <div className=" glass w-full col-span-5 max-w-[600px] mx-auto hover:scale-105 duration-200 transition-all">
         <div className="w-full h-auto">
           <img
             src={proyectos[currentProject].img}
@@ -92,7 +92,7 @@ export default function Proyectos() {
             </div>
             <div>
               {proyectos[currentProject].stack?.map((stack,index)=>{
-                <img key={index} src={stack}></img>
+              <img src={stack} key={index}></img>
               })}
             </div>
           </div>
