@@ -24,25 +24,25 @@ export function Contacto() {
     <section
       className="max-w-[1200px] mx-auto px-6 place-items-center"
       ref={form}
+      id="contact"
     >
       <h2>Comencemos a hablar!!</h2>
-      <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
+      <form ref={form} onSubmit={sendEmail} className="max-w-[600px] mx-auto mt-2">
         <input
           type="text"
           name="from_name"
           placeholder="Su Nombre... "
+          className="my-2"
           required
         />
-        <label>Email</label>
         <input
           type="email"
           placeholder="example@gmail.com"
           name="from_email"
+          className="my-2"
           required
         />
-        <label>Message</label>
-        <textarea name="message" />
+        <textarea name="message" className="my-2" />
         <input
           type="submit"
           className="w-full font-semibold text-xl bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300"

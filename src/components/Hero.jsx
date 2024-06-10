@@ -18,7 +18,7 @@ export function Hero() {
   return (
     <section
       className="max-w-[1200px] mx-auto grid md:grid-cols-8 gap-6 p-10 md:p-0 mb-16 mt-36"
-      id="home"
+      id="about"
     >
       <div className="grid md:grid-cols-2 grid-cols-1 md:col-span-5 col-span-8 p-8 glass">
         <div className="place-items-center">

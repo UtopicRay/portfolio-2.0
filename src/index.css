@@ -38,7 +38,7 @@ input {
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 6px 10px 0 rgba(255, 255, 255, 0.37);
 }
-.project {
+.list-item {
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
@@ -48,7 +48,7 @@ input {
   padding: 15px 20px;
   position: relative;
 }
-.project:after {
+.list-item:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -60,7 +60,7 @@ input {
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-.project:hover:after {
+.list-item:hover:after {
   width: 100%;
   left: 0;
 }

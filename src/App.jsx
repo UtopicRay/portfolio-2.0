@@ -4,6 +4,7 @@ import { Hero } from "./components/Hero";
 import Proyectos from "./components/Proyectos";
 import { Habilidades } from "./components/Experiencia";
 import { Contacto } from "./components/Contacto";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
@@ -13,7 +14,7 @@ function App() {
           <div className="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div>
         </div>
       </div>
-      <Navbar />
+      <Navbar/>
       <main>
         <Hero></Hero>
         <section className="mt-20" id="about">
@@ -22,6 +23,7 @@ function App() {
         <Proyectos />
         <Contacto></Contacto>
       </main>
+     <Footer></Footer>
     </>
   );
 }

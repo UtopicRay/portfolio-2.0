@@ -5,11 +5,13 @@ import {
   DiGit,
   DiBootstrap,
   DiJavascript1,
+  DiPhp,
 } from "react-icons/di";
 import NetFlix from "../assets/img/Netflix-Clon.webp";
+import { SiPostgresql } from "react-icons/si";
 export function Habilidades() {
   return (
-    <div className="max-w-[1000px] grid md:grid-cols-2 grid-cols-1 mx-auto text-left gap-8 place-item-center">
+    <div className="max-w-[1200px] grid md:grid-cols-2 grid-cols-1 mx-auto text-left gap-8 mb-40" id="experiencia">
       <div className='p-6'>
         <h2 className="my-2 font-bold">Experiencia</h2>
         <p className='my-4'>
@@ -29,6 +31,8 @@ export function Habilidades() {
           <DiReact className="text-blue-600 hover:scale-110 transition-all duration-300"></DiReact>
           <DiBootstrap className="text-purple-700 hover:scale-110 transition-all duration-300"></DiBootstrap>
           <DiGit className="text-red-600 hover:scale-110 transition-all duration-300"></DiGit>
+          <DiPhp className="text-gray-300 hover:scale-110 transition-all duration-200"></DiPhp>
+          <SiPostgresql className="text-blue-700 hover:scale-110 transition-all duration-200"></SiPostgresql>
         </div>
       </div>
       <div className="relative group">

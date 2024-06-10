@@ -3,6 +3,10 @@ import LaVelada from "../assets/img/Clon-LaVelada.webp";
 import Esland from "../assets/img/esland-clon.webp";
 import NetFlix from "../assets/img/Netflix-Clon.webp";
 import react from '../assets/icons/react.svg'
+import { RiFirebaseFill, RiTailwindCssFill } from "react-icons/ri";
+import { DiReact } from "react-icons/di";
+import { GiAstrolabe } from "react-icons/gi";
+import { SiAstro } from "react-icons/si";
 export default function Proyectos() {
   const proyectos = [
     {
@@ -28,7 +32,7 @@ export default function Proyectos() {
           github: "https://github.com/UtopicRay/esland-clon",
         },
       ],
-      stack: [],
+      stack: [<SiAstro className="text-orange-500 text-4xl hover:scale-110 transition-all duration-200"/>,<DiReact className="text-4xl text-blue-600 hover:scale-110 transition-all duration-200"/>,<RiTailwindCssFill className="text-4xl text-blue-300 hover:scale-110 transition-all duration-200"/>],
     },
     {
       name: "Clon de Netflix",
@@ -41,16 +45,16 @@ export default function Proyectos() {
           github: "https://github.com/UtopicRay/Mi-clon-de-Netflix",
         },
       ],
-      stack: [],
+      stack: [<DiReact className="text-4xl text-blue-600 hover:scale-110 transition-all duration-200"/>,<RiTailwindCssFill className="text-4xl text-blue-300 hover:scale-110 transition-all duration-200"/>,<RiFirebaseFill className="text-4xl text-yellow-400 hover:scale-110 transition-all duration-200"></RiFirebaseFill>],
     },
   ];
   const [currentProject, setCurrentProject] = useState(0);
   return (
     <section
       className="my-24 max-w-[1200px] mx-auto grid grid-cols-8 gap-6"
-      id="proyectos"
+      id="projects"
     >
-      <div className="relative z-10 col-span-3 grid place-items-center grid-cols-1">
+      <div className="relative col-span-3 grid place-items-center grid-cols-1">
         <h2 className=" text-4xl font-bold ">
             Proyecto
         </h2>
@@ -59,7 +63,7 @@ export default function Proyectos() {
             <li
               key={index}
               className={`cursor-pointer text-gray-300  ${
-                currentProject === index ? "active-project" : "project"
+                currentProject === index ? "active-project" : "list-item"
               }`}
               onClick={() => setCurrentProject(index)}
             >
@@ -90,10 +94,11 @@ export default function Proyectos() {
             Código
             </a>
             </div>
-            <div>
-              {proyectos[currentProject].stack?.map((stack,index)=>{
-              <img src={stack} key={index}></img>
-              })}
+            <div className="flex">
+              {proyectos[currentProject].stack?.map((stack,index)=>(
+                <div className="" key={index}>
+                {stack}
+                </div>))}
             </div>
           </div>
         </div>
