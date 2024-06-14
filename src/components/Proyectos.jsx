@@ -1,25 +1,29 @@
 import React, { useState } from "react";
-import LaVelada from "../assets/img/Clon-LaVelada.webp";
+import VueCommerce from "../assets/img/VueCommerce.webp";
 import Esland from "../assets/img/esland-clon.webp";
 import NetFlix from "../assets/img/Netflix-Clon.webp";
-import react from '../assets/icons/react.svg'
 import { RiFirebaseFill, RiTailwindCssFill } from "react-icons/ri";
 import { DiReact } from "react-icons/di";
-import { GiAstrolabe } from "react-icons/gi";
-import { SiAstro } from "react-icons/si";
+import { SiAstro, SiVuetify } from "react-icons/si";
+import { FaVuejs } from "react-icons/fa6";
+import ProjectCard from "./ProjectCard";
 export default function Proyectos() {
   const proyectos = [
     {
-      name: "Clon de la Velado 3",
-      description: "Clon de la landing page la Velada del Año 3.",
-      img: LaVelada,
+      name: "VueCommerce",
+      description:
+        "Proyecto basado en un ecommerce. Cuenta con la funcionalidad de añadir a al carrito de la compra, asi como buscar productos y ver los detalles de los mismos. La información de los productos es gracias al consumo de la api de 'dummyjson.com'. Proyecto propio.",
+      img: VueCommerce,
       link: [
         {
-          site: "https://clon-la-velada-e68ehyfz7-utopicrays-projects.vercel.app/",
+          site: "https://vuetify-ecommerce.vercel.app/",
           github: "https://github.com/UtopicRay/Clon-la-VeladaIII",
         },
       ],
-      stack: [react ],
+      stack: [
+        <FaVuejs className=" text-green-500 text-4xl hover:scale-110 transition-all duration-200" />,
+        <SiVuetify className=" text-blue-500 text-4xl hover:scale-110 transition-all duration-200" />,
+      ],
     },
     {
       name: "Clon de los Premios Esland",
@@ -32,32 +36,38 @@ export default function Proyectos() {
           github: "https://github.com/UtopicRay/esland-clon",
         },
       ],
-      stack: [<SiAstro className="text-orange-500 text-4xl hover:scale-110 transition-all duration-200"/>,<DiReact className="text-4xl text-blue-600 hover:scale-110 transition-all duration-200"/>,<RiTailwindCssFill className="text-4xl text-blue-300 hover:scale-110 transition-all duration-200"/>],
+      stack: [
+        <SiAstro className="text-orange-500 text-4xl hover:scale-110 transition-all duration-200" />,
+        <DiReact className="text-4xl text-blue-600 hover:scale-110 transition-all duration-200" />,
+        <RiTailwindCssFill className="text-4xl text-blue-300 hover:scale-110 transition-all duration-200" />,
+      ],
     },
     {
       name: "Clon de Netflix",
       description:
-        "Proyecto basada en Netflix como plataforma de audiovisuales. Cuenta con servicio de autenticación y la información de la peliculas es gracias al consumo de la api de 'themoviedb.org'. Proyecto propio.",
+        "Proyecto basada en Netflix como plataforma de audiovisuales. Cuenta con servicio de autenticación y la información de la películas es gracias al consumo de la api de 'themoviedb.org'. Proyecto propio.",
       img: NetFlix,
-      link: [
+      link: 
         {
           site: "https://mi-clon-de-netflix.vercel.app/",
           github: "https://github.com/UtopicRay/Mi-clon-de-Netflix",
         },
+      stack: [
+        <DiReact className="text-4xl text-blue-600 hover:scale-110 transition-all duration-200" />,
+        <RiTailwindCssFill className="text-4xl text-blue-300 hover:scale-110 transition-all duration-200" />,
+        <RiFirebaseFill className="text-4xl text-yellow-400 hover:scale-110 transition-all duration-200"></RiFirebaseFill>,
       ],
-      stack: [<DiReact className="text-4xl text-blue-600 hover:scale-110 transition-all duration-200"/>,<RiTailwindCssFill className="text-4xl text-blue-300 hover:scale-110 transition-all duration-200"/>,<RiFirebaseFill className="text-4xl text-yellow-400 hover:scale-110 transition-all duration-200"></RiFirebaseFill>],
     },
   ];
   const [currentProject, setCurrentProject] = useState(0);
+  console.log(proyectos[currentProject].link[0].github)
   return (
     <section
       className="my-24 max-w-[1200px] mx-auto grid grid-cols-8 gap-6"
       id="projects"
     >
       <div className="relative col-span-3 grid place-items-center grid-cols-1">
-        <h2 className=" text-4xl font-bold ">
-            Proyecto
-        </h2>
+        <h2 className=" text-4xl font-bold ">Proyecto</h2>
         <ul className="ml-6 flex flex-row md:flex-col gap-6 flex-wrap justify-center md:gap-1 space-y-2 md:space-y-4 text-2xl text-left">
           {proyectos.map((proyecto, index) => (
             <li
@@ -72,37 +82,14 @@ export default function Proyectos() {
           ))}
         </ul>
       </div>
-
-      <div className=" glass w-full col-span-5 max-w-[600px] mx-auto hover:scale-105 duration-200 transition-all">
-        <div className="w-full h-auto">
-          <img
-            src={proyectos[currentProject].img}
-            alt={`imagen de ${proyectos[currentProject].name}`}
-            className="w-full h-full object-cover rounded-lg mb-4"
-          ></img>
-        </div>
-        <div className="p-6">
-          <p className="text-gray-200 my-4 text-left">
-            {proyectos[currentProject].description}
-          </p>
-          <div className="flex justify-between items-center">
-            <div className="space-x-4 ">
-            <a href={proyectos[currentProject].link.site} className="bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300">
-              Visitar
-            </a>
-            <a href={proyectos[currentProject].link.github} className="bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300">
-            Código
-            </a>
-            </div>
-            <div className="flex">
-              {proyectos[currentProject].stack?.map((stack,index)=>(
-                <div className="" key={index}>
-                {stack}
-                </div>))}
-            </div>
-          </div>
-        </div>
-      </div>
+      <ProjectCard
+        title={proyectos[currentProject].name}
+        imgUrl={proyectos[currentProject].img}
+        description={proyectos[currentProject].description}
+        skills={proyectos[currentProject].stack}
+        previewUrl={proyectos[currentProject].link[0].site}
+        gitUrl={proyectos[currentProject].link[0].github}
+      ></ProjectCard>
     </section>
   );
 }

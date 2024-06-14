@@ -19,7 +19,6 @@ export function Navbar() {
         <li>
           <Link smooth={true} offset={50} duration={500} to="projects" className='list-item text-sm'>Proyectos</Link>
         </li>
-       
       </ul>
       <button className="md:block hidden bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300">
         <Link smooth={true} offset={50} duration={500} to="contact" className="text-white font-bold">
@@ -36,19 +35,19 @@ export function Navbar() {
             : " text-left fixed left-[-100%] ease-in-out duration-500 top-0 h-full [&&>li]:p-5 w-[60%]"
         }
       >
-        <h1 className="ml-2 text-3xl font-bold list-item">Ray</h1>
+        <h1 className="ml-2 text-3xl font-bold">Ray</h1>
         <li>
-          <Link smooth={true} offset={50} duration={500} to="about" className='list-item'> Sobre Mí</Link>
+          <Link smooth={true} duration={500} to="about" className='list-item' onClick={()=>setNav(false)}> Sobre Mí</Link>
         </li>
         <li>
-          <Link smooth={true} offset={50} duration={500} to="projects" className='list-item'>Proyectos</Link>
+          <Link smooth={true} offset={0} duration={500} to="experiencia" className='list-item' onClick={()=>setNav(false)}>Experiencia</Link>
         </li>
         <li>
-          <Link smooth={true} offset={50} duration={500} to="skill" className='list-item'>Habilidades</Link>
+          <Link smooth={true} offset={50} duration={500} to="projects" className='list-item' onClick={()=>setNav(false)}>Proyectos</Link>
         </li>
         <li>
-          <button className="md:block hidden bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300">
-            <Link smooth={true} offset={50} duration={500} to="contact" className="text-white font-bold">
+          <button className="bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300">
+            <Link smooth={true} offset={50} duration={500} to="contact" className="text-white font-bold" onClick={()=>setNav(false)}>
               Contact
             </Link>
           </button>
