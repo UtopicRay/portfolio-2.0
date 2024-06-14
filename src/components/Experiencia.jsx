@@ -39,7 +39,7 @@ export function Habilidades() {
       <div className="absolute -inset-1 place-items-center  w-full bg-gradient-to-r from-purple-100 to-orange-500 rounded-lg backdrop-blur-lg blur opacity-25 group-hover:opacity-100 transition-all duration-300">
       </div>
         <div className="relative p-4 h-full bg-white bg-opacity-25 backdrop-blur-lg rounded-lg">
-        <img className="h-full rounded-lg" src={NetFlix}></img>
+        <img className="h-full rounded-lg" src={NetFlix} alt="foto de proyecto"></img>
         </div>
       </div>
     </div>

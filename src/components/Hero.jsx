@@ -1,6 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import { AiFillLinkedin, AiFillGithub, AiFillMessage } from "react-icons/ai";
-import Avatar from "../assets/img/Avatar2.png";
+import Avatar from "../assets/img/Avatar2.webp";
 import {
   DiHtml5,
   DiCss3,
@@ -22,7 +22,7 @@ export function Hero() {
     >
       <div className="grid md:grid-cols-2 grid-cols-1 md:col-span-5 col-span-8 p-8 glass">
         <div className="place-items-center">
-          <img className="h-auto aspect-auto" src={Avatar}></img>
+          <img className="max-w-full h-auto aspect-auto" src={Avatar} alt="imagen de Avatar"></img>
         </div>
         <div className="mx-2 flex justify-center items-start flex-col">
           <p className="text-xl md:text-3xl font-bold text-left">

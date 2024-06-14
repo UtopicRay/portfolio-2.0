@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function ProjectCard({title, description, imgUrl, gitUrl, previewUrl,skills}) {
-  console.log(gitUrl)
   return (
     <div className=" glass w-full col-span-5 max-w-[600px] mx-auto hover:scale-105 duration-200 transition-all animate-fade-left">
         <div className="w-full h-auto">

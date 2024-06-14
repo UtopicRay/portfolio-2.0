@@ -31,19 +31,19 @@ export function Navbar() {
       <ul
         className={
           nav
-            ? `text-gray-300 text-left text-xl [&&>li]:p-5 fixed left-0 top-0 w-[60%] bg-black h-[100vh] border-r border-r-gray-900 ease-in-out duration-500 z-50 backdrop-blur-lg bg-opacity-25`
-            : " text-left fixed left-[-100%] ease-in-out duration-500 top-0 h-full [&&>li]:p-5 w-[60%]"
+            ? `text-gray-300 text-left text-xl fixed left-0 top-0 w-[60%] bg-black h-[100vh] border-r border-r-gray-900 ease-in-out duration-500 z-50 backdrop-blur-lg bg-opacity-25`
+            : " text-left fixed left-[-100%] ease-in-out duration-500 top-0 h-full w-[60%]"
         }
       >
         <h1 className="ml-2 text-3xl font-bold">Ray</h1>
         <li>
-          <Link smooth={true} duration={500} to="about" className='list-item' onClick={()=>setNav(false)}> Sobre Mí</Link>
+          <Link smooth={true} duration={500} to="about" className='list-item p-5' onClick={()=>setNav(false)}> Sobre Mí</Link>
         </li>
         <li>
-          <Link smooth={true} offset={0} duration={500} to="experiencia" className='list-item' onClick={()=>setNav(false)}>Experiencia</Link>
+          <Link smooth={true} offset={0} duration={500} to="experiencia" className='list-item p-5' onClick={()=>setNav(false)}>Experiencia</Link>
         </li>
         <li>
-          <Link smooth={true} offset={50} duration={500} to="projects" className='list-item' onClick={()=>setNav(false)}>Proyectos</Link>
+          <Link smooth={true} offset={50} duration={500} to="projects" className='list-item p-5' onClick={()=>setNav(false)}>Proyectos</Link>
         </li>
         <li>
           <button className="bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300">
