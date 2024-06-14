@@ -9,19 +9,11 @@ import {
 } from "react-icons/di";
 import NetFlix from "../assets/img/Netflix-Clon.webp";
 import { SiPostgresql } from "react-icons/si";
-export function Habilidades() {
+ function Experiencia() {
   return (
     <div
       className="max-w-[1200px] grid md:grid-cols-2 grid-cols-1 mx-auto text-left gap-8 mb-40"
       id="experiencia"
-      data-aos="fade-up"
-      data-aos-offset="0"
-      data-aos-delay="50"
-      data-aos-easing="linear"
-      data-aos-duration="500"
-      data-aos-mirror="true"
-      data-aos-once="false"
-      data-aos-anchor-placement="top-center"
     >
       <div className="p-6">
         <h2 className="my-2 font-bold">Experiencia</h2>
@@ -60,3 +52,4 @@ export function Habilidades() {
     </div>
   );
 }
+export default Experiencia;

@@ -2,7 +2,7 @@ import "./App.css";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import Proyectos from "./components/Proyectos";
-import { Habilidades } from "./components/Experiencia";
+import  Experiencia from "./components/Experiencia";
 import { Contacto } from "./components/Contacto";
 import Footer from "./components/Footer";
 function App() {
@@ -18,7 +18,7 @@ function App() {
       <main>
         <Hero></Hero>
         <section className="mt-20" id="about">
-          <Habilidades />
+          <Experiencia />
         </section>
         <Proyectos />
         <Contacto></Contacto>
