@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import VueCommerce from "../assets/img/VueCommerce.webp";
 import Esland from "../assets/img/esland-clon.webp";
 import NetFlix from "../assets/img/Netflix-Clon.webp";
+import Acortador from "../assets/img/Acortador.webp";
 import { RiFirebaseFill, RiTailwindCssFill } from "react-icons/ri";
-import { DiReact } from "react-icons/di";
+import { DiReact,DiPhp } from "react-icons/di";
 import { SiAstro, SiVuetify } from "react-icons/si";
 import { FaVuejs } from "react-icons/fa6";
 import ProjectCard from "./ProjectCard";
@@ -52,6 +53,18 @@ export default function Proyectos() {
         <DiReact className="text-4xl text-blue-600 hover:scale-110 transition-all duration-200" />,
         <RiTailwindCssFill className="text-4xl text-blue-300 hover:scale-110 transition-all duration-200" />,
         <RiFirebaseFill className="text-4xl text-yellow-400 hover:scale-110 transition-all duration-200"></RiFirebaseFill>,
+      ],
+    }, {
+      name: "Acortador de URL y Generador de QR",
+      description:
+        "Servicio de Generador de QR y acortador de URL. Proyecto propio.",
+      img: Acortador,
+      link: {
+        site: "https://shorturlqr.000webhostapp.com/",
+        github: "https://github.com/UtopicRay/Acortador-Url-Generador-QR",
+      },
+      stack: [
+        <DiPhp className="text-4xl text-blue-300 hover:scale-110 transition-all duration-200"></DiPhp>
       ],
     },
   ];

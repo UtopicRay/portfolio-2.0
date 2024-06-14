@@ -14,7 +14,7 @@ export default function ProjectCard({title, description, imgUrl, gitUrl, preview
           <p className="text-gray-200 my-4 text-left">
             {description}
           </p>
-          <div className="flex sm:flex-wrap flex-col justify-between items-center">
+          <div className="flex md:flex-row flex-col justify-between items-center w-full">
             <div className="space-x-4 mt-4 md:mt-0 ">
               <a
                 href={previewUrl}
@@ -29,7 +29,7 @@ export default function ProjectCard({title, description, imgUrl, gitUrl, preview
                 Código
               </a>
             </div>
-            <div className="flex mt-4 justify-start items-start w-full">
+            <div className="flex mt-4 justify-start items-start ">
               {skills?.map((skill, index) => (
                 <div className="" key={index}>
                   {skill}
