@@ -22,7 +22,11 @@ export function Hero() {
     >
       <div className="grid md:grid-cols-2 grid-cols-1 md:col-span-5 col-span-8 p-8 glass">
         <div className="place-items-center">
-          <img className="max-w-full h-auto aspect-auto" src={Avatar} alt="imagen de Avatar"></img>
+          <img
+            className="max-w-full h-auto aspect-auto"
+            src={Avatar}
+            alt="imagen de Avatar"
+          ></img>
         </div>
         <div className="mx-2 flex justify-center items-start flex-col">
           <p className="text-xl md:text-3xl font-bold text-left">
@@ -42,18 +46,21 @@ export function Hero() {
             </span>
           </p>
           <a href="/document/CV.pdf" download="Ray Rendón Mesa Currículum.pdf">
-            <button className="bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300 mt-16">
+            <button className="bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300 mt-16 hover:scale-110">
               Descargar CV
             </button>
           </a>
           <div className="flex md:justify-center justify-start items-center mt-4">
             <a
-              className="text-white  hover:scale-110 transition-all duration-200 underline"
+              className="flex text-white  hover:scale-110 transition-all duration-200 underline"
               href="mailto:rayrm2021@gmail.com?subject=Interesado%20en%20sus%20servicios"
             >
               rayrm2021@gmail.com
+              <span>
+                {" "}
+                <MdEmail className="text-gray-500 text-2xl mx-2"></MdEmail>
+              </span>
             </a>
-            <MdEmail className="text-gray-500 text-2xl mx-2 hover:scale-125 transition-all duration-300"></MdEmail>
           </div>
         </div>
       </div>
@@ -77,8 +84,12 @@ export function Hero() {
           </div>
         </div>
         <div className="text-5xl gap-4 flex justify-center items-center glass text-white p-2 ">
-          <AiFillGithub className="hover:scale-110 transition-all duration-200"></AiFillGithub>
-          <AiFillLinkedin className="hover:scale-110 transition-all duration-200"></AiFillLinkedin>
+          <a href="https://github.com/UtopicRay?tab=repositories">
+            <AiFillGithub className="hover:scale-110 transition-all duration-200"></AiFillGithub>
+          </a>
+          <a href="https://www.linkedin.com/in/ray-rendon-mesa-1948b7260?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWGSERolORaigToBCXdkJaQ%3D%3D">
+            <AiFillLinkedin className="hover:scale-110 transition-all duration-200"></AiFillLinkedin>
+          </a>
         </div>
       </div>
     </section>

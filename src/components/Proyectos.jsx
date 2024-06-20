@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useRef, useEffect } from "react";
 import VueCommerce from "../assets/img/VueCommerce.webp";
 import Esland from "../assets/img/esland-clon.webp";
 import NetFlix from "../assets/img/Netflix-Clon.webp";
@@ -69,6 +69,13 @@ export default function Proyectos() {
     },
   ];
   const [currentProject, setCurrentProject] = useState(0);
+  const style=useRef()
+  useEffect(()=>{
+    style.current.classList.add("animate-fade-left")
+    setTimeout(()=>{
+      style.current.classList.remove("animate-fade-left")
+    },501)
+  },[currentProject])
   return (
     <section
       className="my-24 max-w-[1200px] mx-auto grid md:grid-cols-8 grid-cols-2 gap-6"
@@ -90,14 +97,43 @@ export default function Proyectos() {
           ))}
         </ul>
       </div>
-      <ProjectCard
-        title={proyectos[currentProject].name}
-        imgUrl={proyectos[currentProject].img}
-        description={proyectos[currentProject].description}
-        skills={proyectos[currentProject].stack}
-        previewUrl={proyectos[currentProject].link.site}
-        gitUrl={proyectos[currentProject].link.github}
-      ></ProjectCard>
+      <div className=" glass w-full col-span-5 max-w-[600px] mx-auto hover:scale-105 duration-200 transition-all place-content-end" ref={style}>
+        <div className="w-full h-auto">
+          <img
+            src={proyectos[currentProject].img}
+            alt={`imagen de ${proyectos[currentProject].name}`}
+            className="w-full h-full object-cover rounded-lg mb-4"
+          ></img>
+        </div>
+        <div className="p-6">
+          <p className="text-gray-200 my-4 text-left">
+            {proyectos[currentProject].description}
+          </p>
+          <div className="flex md:flex-row flex-col justify-between items-center w-full">
+            <div className="space-x-4 mt-4 md:mt-0 ">
+              <a
+                href={proyectos[currentProject].link.site}
+                className="bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300"
+              >
+                Visitar
+              </a>
+              <a
+                className="bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300"
+              href={proyectos[currentProject].link.github}
+              >
+                Código
+              </a>
+            </div>
+            <div className="flex mt-4 justify-start items-start ">
+              {proyectos[currentProject].stack?.map((skill, index) => (
+                <div className="" key={index}>
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
