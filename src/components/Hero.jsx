@@ -84,7 +84,7 @@ export function Hero() {
           </div>
         </div>
         <div className="text-5xl gap-4 flex justify-center items-center glass text-white p-2 ">
-          <a href="https://github.com/UtopicRay?tab=repositories">
+          <a href="https://github.com/UtopicRay">
             <AiFillGithub className="hover:scale-110 transition-all duration-200"></AiFillGithub>
           </a>
           <a href="https://www.linkedin.com/in/ray-rendon-mesa-1948b7260?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWGSERolORaigToBCXdkJaQ%3D%3D">
