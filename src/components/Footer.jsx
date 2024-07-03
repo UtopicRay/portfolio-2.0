@@ -11,7 +11,7 @@ function Footer() {
           <a href="https://www.linkedin.com/in/ray-rendon-mesa-1948b7260?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWGSERolORaigToBCXdkJaQ%3D%3D">
             <LiaLinkedin className="text-gray-500 text-4xl hover:scale-125 transition-all duration-200"></LiaLinkedin>
           </a>
-          <a href="https://github.com/UtopicRay?tab=repositories">
+          <a href="https://github.com/UtopicRay">
             <LiaGithub className="text-gray-500 text-4xl hover:scale-125 transition-all duration-200"></LiaGithub>
           </a>
         </div>
