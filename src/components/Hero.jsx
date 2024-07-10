@@ -45,7 +45,7 @@ export function Hero() {
               ></TypeAnimation>
             </span>
           </p>
-          <a href="/document/CV.pdf" download="Ray Rendón Mesa Currículum.pdf">
+          <a href="https://drive.google.com/file/d/1_F307skOtnPWdSxpLtCzu9_ETlJIL81U/view?usp=sharing" download="Ray Rendón Mesa Currículum.pdf" target="_blank">
             <button className="bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300 mt-16 hover:scale-110">
               Descargar CV
             </button>
