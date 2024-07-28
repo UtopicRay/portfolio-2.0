@@ -45,7 +45,11 @@ export function Hero() {
               ></TypeAnimation>
             </span>
           </p>
+<<<<<<< HEAD
           <a href="https://drive.google.com/file/d/1_F307skOtnPWdSxpLtCzu9_ETlJIL81U/view?usp=sharing"target="_blank" download="Ray Rendón Mesa Currículum.pdf">
+=======
+          <a href="https://drive.google.com/file/d/1_F307skOtnPWdSxpLtCzu9_ETlJIL81U/view?usp=sharing" download="Ray Rendón Mesa Currículum.pdf" target="_blank">
+>>>>>>> 6df3bae8879288732b94d58ed3ec060ee71d0559
             <button className="bg-[#2A629A] px-4 py-2 rounded-lg text-gray-200 hover:bg-slate-700 duration-300 mt-16 hover:scale-110">
               Descargar CV
             </button>
@@ -84,7 +88,7 @@ export function Hero() {
           </div>
         </div>
         <div className="text-5xl gap-4 flex justify-center items-center glass text-white p-2 ">
-          <a href="https://github.com/UtopicRay?tab=repositories">
+          <a href="https://github.com/UtopicRay">
             <AiFillGithub className="hover:scale-110 transition-all duration-200"></AiFillGithub>
           </a>
           <a href="https://www.linkedin.com/in/ray-rendon-mesa-1948b7260?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BWGSERolORaigToBCXdkJaQ%3D%3D">
